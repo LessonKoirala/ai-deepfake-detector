@@ -35,7 +35,7 @@ The pipeline includes workflow support from data preprocessing to model deployme
 
 ```
 
-.
+
 
 ├── app.py                      # Main Flask application
 
@@ -115,23 +115,23 @@ The pipeline includes workflow support from data preprocessing to model deployme
 
 1. **Clone the Repository**
 
-   ```bash
+  bash
 
    git clone https://github.com/your-username/ai-deepfake-detector.git
 
    cd ai-deepfake-detector
 
-   ```
+
 
 
 
 2. **Install Dependencies**
 
-   ```bash
+   bash
 
    pip install Flask Flask-Cors numpy tensorflow Pillow opencv-python
 
-   ```
+
 
 
 
@@ -151,11 +151,11 @@ The pipeline includes workflow support from data preprocessing to model deployme
 
 1. **Preprocess Video Data**
 
-   ```bash
+   bash
 
    python cleanvideo.py
 
-   ```
+  
 
    *Converts videos to image frames in `processed_image_data/`*
 
@@ -163,11 +163,11 @@ The pipeline includes workflow support from data preprocessing to model deployme
 
 2. **Train Image Classification Model**
 
-   ```bash
+   bash
 
    python image_train.py
 
-   ```
+  
 
    *Generates `image_model_output/ai_vs_human.keras` and `class_names.json`*
 
@@ -175,11 +175,11 @@ The pipeline includes workflow support from data preprocessing to model deployme
 
 3. **Train Deepfake Detection Model**
 
-   ```bash
+    bash
 
    python train_video.py
 
-   ```
+
 
    *Produces `deepfake_detector_model.keras` in project root*
 
@@ -191,11 +191,11 @@ The pipeline includes workflow support from data preprocessing to model deployme
 
 1. **Start the API Server**
 
-   ```bash
+   bash
 
    python app.py
 
-   ```
+
 
 
 
@@ -229,7 +229,7 @@ The pipeline includes workflow support from data preprocessing to model deployme
 
 
 
-```json
+ json
 
 {
 
@@ -241,7 +241,7 @@ The pipeline includes workflow support from data preprocessing to model deployme
 
 }
 
-```
+
 
 
 
@@ -251,21 +251,19 @@ The pipeline includes workflow support from data preprocessing to model deployme
 
 ### Analyse Image via curl
 
-```bash
+ bash
 
 curl -X POST -F "file=@test_image.jpg" http://localhost:5001/analyze/image
-
-```
 
 
 
 ### Analyse Video via curl
 
-```bash
+ bash
 
 curl -X POST -F "file=@test_video.mp4" http://localhost:5001/analyze/video
 
-```
+
 
 
 
@@ -304,3 +302,4 @@ Training parameters and model configurations can be modified in the respective t
 4. Push to the branch (`git push origin feature/amazing-feature`)
 
 5. Open a Pull Request
+
